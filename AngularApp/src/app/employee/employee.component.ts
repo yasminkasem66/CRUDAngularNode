@@ -34,6 +34,9 @@ export class EmployeeComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    console.log("{form}");
+    console.log(form.value);
+    
     if (form.value._id == "") {
       this.employeeService.postEmployee(form.value).subscribe((res) => {
         this.resetForm(form);

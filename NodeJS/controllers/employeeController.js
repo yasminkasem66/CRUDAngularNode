@@ -23,6 +23,9 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+    console.log("req",  req.body.name);
+    console.log("req",  req.body.position);
+    console.log("req",  req.body.office);
     var emp = new Employee({
         name: req.body.name,
         position: req.body.position,
